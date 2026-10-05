@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #060B14;
+  --card: #101B2D;
+  --line: rgba(255,255,255,0.08);
+}
+html, body, #root { min-height: 100%; }
+html, body {
+  background: var(--bg);
+  color: #E7ECF3;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,.font-display { font-family: 'Manrope', sans-serif; }
+::-webkit-scrollbar{ width:8px; height:8px; }
+::-webkit-scrollbar-track{ background:transparent; }
+::-webkit-scrollbar-thumb{ background:#1E2C46; border-radius:8px; }
+.bg-hero{
+  background:
+    radial-gradient(circle at 20% 15%, rgba(16,185,129,0.16), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(99,102,241,0.14), transparent 50%),
+    linear-gradient(180deg, #050A12 0%, #060B14 60%);
+}
+.card{ background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+.fade-in{ animation: fadeIn .35s ease both; }
+@keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+input, select, textarea{ background:#0A1322; border:1px solid var(--line); color:#E7ECF3; }
+input::placeholder, textarea::placeholder{ color:#5A6883; }
+input:disabled, select:disabled, textarea:disabled{ opacity:.6; cursor:not-allowed; }
+select option{ background:#0A1322; color:#E7ECF3; }
+input[type="date"], input[type="time"]{ color-scheme: dark; }
